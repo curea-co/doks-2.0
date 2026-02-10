@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>교육패스권 신청하기</title>
+    <meta
+      name="description"
+      content="교육패스권 신청 화면입니다. iOS/Android 환경에서 줄바꿈, 자간, 폰트/여백이 안정적으로 보이도록 모바일 최적화되었습니다."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./apply.css" />
+  </head>
+  <body>
+    <header class="apply-header">
+      <div class="apply-shell apply-header-inner">
+        <a class="apply-brand" href="./index.html">수원세민인강</a>
+        <a class="exit-link" href="./index.html" aria-label="저장 후 나가기">
+          저장 후 나가기
+          <span aria-hidden="true">×</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="apply-main">
+      <div class="apply-shell">
+        <h1 class="apply-title">교육패스권 신청하기</h1>
+
+        <section class="summary-grid" aria-label="신청 핵심 정보">
+          <article class="summary-card">
+            <p class="summary-title">신청마감</p>
+            <p class="summary-main">3월 31일 오후 6시</p>
+            <p class="summary-sub">선착순 모집</p>
+          </article>
+          <article class="summary-card">
+            <p class="summary-title">교육 방식</p>
+            <p class="summary-main">100% 온라인</p>
+            <p class="summary-sub">온라인 강의</p>
+          </article>
+          <article class="summary-card">
+            <p class="summary-title">지원 대상</p>
+            <p class="summary-main">수원 거주 시민</p>
+            <p class="summary-sub">수원 소재학교 재학생 포함</p>
+          </article>
+        </section>
+
+        <form class="apply-form" novalidate>
+          <section class="form-section">
+            <h2>증빙 서류 제출</h2>
+            <label for="proof-file" class="field-label">주민등록초본(필수)</label>
+            <p class="field-help">
+              주민등록번호 뒷자리를 가린 뒤 업로드해주세요. 파일은 PDF/JPG/PNG 형식으로 제출할 수 있습니다.
+            </p>
+
+            <input id="proof-file" class="sr-only" type="file" accept=".pdf,.png,.jpg,.jpeg" />
+            <button class="upload-zone" type="button" data-upload-trigger aria-controls="proof-file">
+              <span class="upload-icon" aria-hidden="true">⤴</span>
+              <span class="upload-main">파일 업로드</span>
+              <span class="upload-sub">PDF / JPG / PNG</span>
+              <span class="upload-file-name" data-file-name>선택된 파일 없음</span>
+            </button>
+          </section>
+
+          <section class="form-section">
+            <label class="field-label" for="phone-number">신청자 본인 휴대폰(선택)</label>
+            <div class="phone-row">
+              <input
+                id="phone-number"
+                name="phone-number"
+                type="tel"
+                inputmode="numeric"
+                placeholder="01000000000"
+                autocomplete="tel-national"
+              />
+              <button type="button" class="verify-btn">인증</button>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <p class="field-label">
+              학습하고 싶은 과정과 원하는 교육패스권 1가지를 선택하세요.
+            </p>
+            <div class="level-tabs" role="tablist" aria-label="학습 단계 선택">
+              <button type="button" class="level-tab" role="tab" aria-selected="false">초등과정</button>
+              <button type="button" class="level-tab" role="tab" aria-selected="false">중등과정</button>
+              <button type="button" class="level-tab is-active" role="tab" aria-selected="true">고등과정</button>
+            </div>
+
+            <div class="provider-list">
+              <article class="provider-card is-selected" data-provider>
+                <label class="provider-head">
+                  <span class="provider-name">milkT 고등</span>
+                  <input type="radio" name="provider" checked />
+                  <span class="radio-ui" aria-hidden="true"></span>
+                </label>
+
+                <div class="provider-meta provider-meta-desktop">
+                  <div class="meta-row">
+                    <span>서비스명</span>
+                    <strong>밀크T고등</strong>
+                  </div>
+                  <div class="meta-row">
+                    <span>주요 서비스</span>
+                    <strong>모든 콘텐츠 무제한</strong>
+                  </div>
+                  <div class="meta-row">
+                    <span>가격</span>
+                    <strong>무료</strong>
+                  </div>
+                </div>
+
+                <ul class="provider-meta provider-meta-mobile">
+                  <li>서비스: 밀크T고등 과정을 이용할 수 있습니다.</li>
+                  <li>주요 서비스: 모든 콘텐츠를 무제한으로 학습할 수 있습니다.</li>
+                  <li>가격: 지원 대상에게 전액 무료로 제공됩니다.</li>
+                </ul>
+              </article>
+
+              <article class="provider-card" data-provider>
+                <label class="provider-head">
+                  <span class="provider-name">megastudy N</span>
+                  <input type="radio" name="provider" />
+                  <span class="radio-ui" aria-hidden="true"></span>
+                </label>
+
+                <div class="provider-meta provider-meta-desktop">
+                  <div class="meta-row">
+                    <span>서비스명</span>
+                    <strong>메가스터디</strong>
+                  </div>
+                  <div class="meta-row">
+                    <span>주요 서비스</span>
+                    <strong>모든 콘텐츠 무제한</strong>
+                  </div>
+                  <div class="meta-row">
+                    <span>가격</span>
+                    <strong>무료</strong>
+                  </div>
+                </div>
+
+                <ul class="provider-meta provider-meta-mobile">
+                  <li>서비스: 메가스터디 과정을 선택할 수 있습니다.</li>
+                  <li>주요 서비스: 학습 콘텐츠를 무제한으로 수강할 수 있습니다.</li>
+                  <li>가격: 지원금으로 무료 이용이 가능합니다.</li>
+                </ul>
+              </article>
+
+              <article class="provider-card" data-provider>
+                <label class="provider-head">
+                  <span class="provider-name">ETOOS</span>
+                  <input type="radio" name="provider" />
+                  <span class="radio-ui" aria-hidden="true"></span>
+                </label>
+
+                <div class="provider-meta provider-meta-desktop">
+                  <div class="meta-row">
+                    <span>서비스명</span>
+                    <strong>이투스</strong>
+                  </div>
+                  <div class="meta-row">
+                    <span>주요 서비스</span>
+                    <strong>모든 콘텐츠 무제한</strong>
+                  </div>
+                  <div class="meta-row">
+                    <span>가격</span>
+                    <strong>무료</strong>
+                  </div>
+                </div>
+
+                <ul class="provider-meta provider-meta-mobile">
+                  <li>서비스: 이투스 강의를 중심으로 학습할 수 있습니다.</li>
+                  <li>주요 서비스: 다양한 콘텐츠를 무제한으로 이용할 수 있습니다.</li>
+                  <li>가격: 대상자는 비용 없이 이용 가능합니다.</li>
+                </ul>
+              </article>
+
+              <article class="provider-card" data-provider>
+                <label class="provider-head">
+                  <span class="provider-name">대성마이맥</span>
+                  <input type="radio" name="provider" />
+                  <span class="radio-ui" aria-hidden="true"></span>
+                </label>
+
+                <div class="provider-meta provider-meta-desktop">
+                  <div class="meta-row">
+                    <span>서비스명</span>
+                    <strong>대성마이맥</strong>
+                  </div>
+                  <div class="meta-row">
+                    <span>주요 서비스</span>
+                    <strong>모든 콘텐츠 무제한</strong>
+                  </div>
+                  <div class="meta-row">
+                    <span>가격</span>
+                    <strong>무료</strong>
+                  </div>
+                </div>
+
+                <ul class="provider-meta provider-meta-mobile">
+                  <li>서비스: 대성마이맥 과정을 선택할 수 있습니다.</li>
+                  <li>주요 서비스: 필요한 전 과목 콘텐츠를 무제한으로 이용합니다.</li>
+                  <li>가격: 교육지원금 대상자에게 무료로 제공됩니다.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+        </form>
+      </div>
+    </main>
+
+    <footer class="action-bar" aria-label="신청 단계 이동">
+      <div class="progress-track" aria-hidden="true">
+        <span class="progress-fill"></span>
+      </div>
+      <div class="apply-shell action-inner">
+        <button type="button" class="action-btn action-btn-ghost">임시저장</button>
+        <button type="button" class="action-btn action-btn-primary">다음</button>
+      </div>
+    </footer>
+
+    <script src="./apply.js"></script>
+  </body>
+</html>

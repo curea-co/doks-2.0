@@ -211,9 +211,20 @@ h3 {
   background: linear-gradient(180deg, #3a92ff 0%, #286ee6 100%);
 }
 
+.cta-ghost {
+  background: #eaf2ff;
+  color: #1d59be;
+}
+
+.cta-ghost:hover {
+  background: #dce9ff;
+}
+
 .cta-sm {
   min-height: 40px;
   padding: 0 14px;
+  white-space: nowrap;
+  font-size: 0.88rem;
 }
 
 .hero h1 {
@@ -233,6 +244,13 @@ h3 {
   color: var(--text-muted);
   font-size: clamp(1rem, 1.6vw, 1.125rem);
   line-height: 1.75;
+}
+
+.hero-actions {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .feature-grid {
@@ -649,6 +667,10 @@ details p {
     line-height: 1.72;
   }
 
+  .hero-actions {
+    margin-top: 14px;
+  }
+
   .feature-grid,
   .highlight-grid {
     grid-template-columns: 1fr;
@@ -747,6 +769,14 @@ details p {
   .cta {
     min-height: 44px;
     font-size: 0.92rem;
+  }
+
+  .hero-actions .cta {
+    flex: 1 1 auto;
+  }
+
+  .hero-actions .cta-ghost {
+    flex-basis: 100%;
   }
 }
 
