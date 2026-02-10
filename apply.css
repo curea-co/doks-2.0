@@ -102,6 +102,7 @@ p {
   font-weight: 800;
   line-height: 1.24;
   letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 .summary-grid {
@@ -133,6 +134,7 @@ p {
   font-weight: 800;
   line-height: 1.38;
   letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 .summary-sub {
@@ -140,6 +142,7 @@ p {
   color: var(--text-sub);
   font-size: 0.73rem;
   line-height: 1.45;
+  white-space: nowrap;
 }
 
 .apply-form {
@@ -525,8 +528,16 @@ p {
   }
 
   .apply-title {
-    font-size: clamp(1.28rem, 7vw, 1.54rem);
-    line-height: 1.34;
+    font-size: clamp(1.04rem, 5.2vw, 1.2rem);
+    line-height: 1.3;
+  }
+
+  .summary-main {
+    font-size: 0.84rem;
+  }
+
+  .summary-sub {
+    font-size: 0.66rem;
   }
 
   .field-label {
@@ -567,6 +578,18 @@ p {
 @media (max-width: 390px) {
   .apply-shell {
     width: min(620px, 100% - 18px);
+  }
+
+  .apply-title {
+    font-size: clamp(0.92rem, 4.7vw, 1.04rem);
+  }
+
+  .summary-main {
+    font-size: 0.78rem;
+  }
+
+  .summary-sub {
+    font-size: 0.62rem;
   }
 
   .exit-link {
