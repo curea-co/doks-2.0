@@ -59,12 +59,12 @@ img {
 }
 
 .container {
-  width: min(1160px, 100% - 64px);
+  width: min(1040px, 100% - 64px);
   margin-inline: auto;
 }
 
 .container.narrow {
-  max-width: 860px;
+  max-width: 760px;
 }
 
 .section {
@@ -98,7 +98,7 @@ img {
 .gnb {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 
 .gnb ul {
@@ -120,18 +120,16 @@ img {
   padding: 6px 4px;
 }
 
-.apply-link {
-  min-height: 36px;
-  border-radius: 8px;
-  background: var(--brand);
-  color: #fff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 12px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  white-space: nowrap;
+.gnb-mobile-apply {
+  display: none;
+}
+
+.nav-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffbf2f;
+  flex: 0 0 auto;
 }
 
 .nav-toggle {
@@ -314,14 +312,28 @@ img {
 }
 
 .support-title {
-  text-align: center;
+  text-align: left;
   color: #f6f9ff;
   font-size: clamp(1.45rem, 2.6vw, 1.95rem);
   line-height: 1.34;
 }
 
+.support-title span {
+  display: block;
+  color: #74adff;
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.support-divider {
+  margin-top: 14px;
+  height: 1px;
+  background: #3a4253;
+}
+
 .support-grid {
-  margin-top: 20px;
+  margin-top: 16px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
@@ -471,7 +483,7 @@ img {
 }
 
 .contents-guide-list {
-  margin-top: 16px;
+  margin-top: 14px;
   display: grid;
   gap: 8px;
 }
@@ -505,7 +517,7 @@ img {
 }
 
 .apply-section {
-  background: #efefef;
+  background: #efeff0;
 }
 
 .apply-section-title {
@@ -524,9 +536,9 @@ img {
 .pass-card {
   margin-top: 16px;
   border: 1px solid #dbe3f0;
-  border-radius: 12px;
+  border-radius: 10px;
   background: #fff;
-  padding: 16px;
+  padding: 16px 14px;
 }
 
 .pass-kicker {
@@ -550,11 +562,11 @@ img {
 
 .pass-card a {
   margin-top: 12px;
-  min-height: 40px;
+  min-height: 38px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 14px;
+  padding: 0 13px;
   border-radius: 8px;
   background: #2f80ff;
   color: #fff;
@@ -576,6 +588,8 @@ img {
   margin-top: 18px;
   display: grid;
   gap: 7px;
+  max-width: 760px;
+  margin-inline: auto;
 }
 
 .faq-list details {
@@ -635,11 +649,13 @@ img {
 }
 
 .footer-inner {
-  min-height: 128px;
+  min-height: 132px;
   display: grid;
   align-content: center;
-  gap: 5px;
+  gap: 4px;
   padding-block: 16px;
+  max-width: 760px;
+  margin-inline: auto;
 }
 
 .footer-logo {
@@ -656,7 +672,7 @@ img {
 
 @media (max-width: 980px) {
   .container {
-    width: min(1160px, 100% - 34px);
+    width: min(1040px, 100% - 34px);
   }
 
   .nav-toggle {
@@ -702,9 +718,17 @@ img {
     padding: 8px;
   }
 
-  .apply-link {
+  .gnb-mobile-apply {
     width: 100%;
     min-height: 42px;
+    border-radius: 8px;
+    background: var(--brand);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.82rem;
+    font-weight: 700;
   }
 
   .benefit-grid,
@@ -716,11 +740,15 @@ img {
   .course-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .nav-indicator {
+    display: none;
+  }
 }
 
 @media (max-width: 560px) {
   .container {
-    width: min(1160px, 100% - 22px);
+    width: min(1040px, 100% - 22px);
   }
 
   .section {
@@ -798,6 +826,11 @@ img {
   .faq-title {
     font-size: clamp(1.2rem, 5.7vw, 1.44rem);
     line-height: 1.38;
+  }
+
+  .support-title span {
+    font-size: 0.8rem;
+    margin-bottom: 6px;
   }
 
   .support-card {
@@ -898,6 +931,7 @@ img {
     min-height: 116px;
     text-align: center;
     justify-items: center;
+    padding-block: 14px;
   }
 }
 
@@ -910,7 +944,7 @@ img {
     font-size: clamp(1.36rem, 7.5vw, 1.7rem);
   }
 
-  .apply-link {
-    font-size: 0.77rem;
+  .gnb-mobile-apply {
+    font-size: 0.78rem;
   }
 }
